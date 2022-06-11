@@ -1,5 +1,4 @@
 const bcrypt = require('bcrypt');
-const { update } = require('lodash');
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
@@ -31,11 +30,6 @@ User.init(
 
         //define a username column
         username: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-        //define an email column
-        email: {
             type: DataTypes.STRING,
             allowNull: false
         },
