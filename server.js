@@ -2,12 +2,16 @@ const path = require('path');
 const express = require('express');
 const sequelize = require('./config/connection');
 
+//server set-up
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+//helpers importing
+const helpers = require('./utils/helpers');
+
 //importing handlebars templating engine
 const exphbs = require('express-handlebars')
-const hbs = exphbs.create({});
+const hbs = exphbs.create({helpers});
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
