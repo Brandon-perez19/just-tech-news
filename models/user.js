@@ -21,7 +21,7 @@ User.init(
             //use the special Sequelize DataTypes object provide what type of data it is
             type: DataTypes.INTEGER,
             //this is the equivalent of SQL's `NOT NULL` option
-            alllowNull: false,
+            allowNull: false,
             //instructs that this is the Primary Key
             primaryKey: true,
             //turn on auto increment
@@ -75,9 +75,9 @@ User.init(
 
         //passing in our imported sequelize connection (direct connection to our database)
         sequelize,
-        //dont automaticall create createdAt/updatedAt timestamp fields
+        //don't automatically create createdAt/updatedAt timestamp fields
         timestamps: false,
-        //dont' pluralize name of database table
+        //don't pluralize name of database table
         freezeTableName: true,
         //use underscores instead of camel-casing
         underscored: true,

@@ -41,7 +41,6 @@ app.use(session(sess));
 //turn on routes
 app.use(require('./controllers'));
 
-
 //turn on connection to db and server
 //force:true re-creates tables. Drops and re-establish 
 sequelize.sync({ force: false }).then(() => {

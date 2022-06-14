@@ -7,7 +7,6 @@ module.exports = {
             return `${word}s`;
         } 
         return word;
-        
     },
     format_url: url => {
         return url
